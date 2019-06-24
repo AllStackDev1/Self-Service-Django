@@ -1,0 +1,35 @@
+.auth-wrapper {
+    margin: 100px auto;
+}
+.auth-logo{
+    padding: 30px;
+}
+.auth-logo>img{
+    width: 100px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+nav{
+    border-bottom: 1px solid gainsboro;
+}
+.user_profile img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.dashboard-content{
+    padding: 20px 10px;
+}
+.card.menu-item:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.menu-item img{
+    width: 150px;
+    height: 150px;
+}

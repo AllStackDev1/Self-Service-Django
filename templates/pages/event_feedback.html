@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block title %}Event Feedback{% endblock %}
+{% block content %}
+{% load static %}
+<!-- Top Bar -->
+{% include 'partials/_navbar.html' with page_title="Event Feedback"%}
+<div class="wrapper">
+    <div class="container">
+        <div class="dashboard-content">
+            <!-- Alerts -->
+            {% include 'partials/_alerts.html' %}
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card my-5">
+                        <div class="card-body">
+                            <h2>Add your joi form here</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

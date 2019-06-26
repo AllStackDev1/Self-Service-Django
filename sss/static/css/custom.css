@@ -17,6 +17,7 @@
 }
 nav{
     border-bottom: 1px solid gainsboro;
+    background-color: #fff;
 }
 .user_profile img{
     width: 28px;

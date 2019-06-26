@@ -48,7 +48,10 @@ def login(request):
 
 
 def logout(request):
-    return redirect('login')
+    if request.method == 'POST':
+        auth.logout(request)
+        messages.success(request, 'Goodbye!')
+        return redirect('login')
 
 
 menus = [
@@ -61,7 +64,7 @@ menus = [
     {
         'id': 2,
         'image': 'img/daily-time-sheet.jpg',
-        'link': 'daily-time-sheet',
+        'link': 'btl-plus',
         'title': 'BTL Plus',
     },
     {
@@ -76,7 +79,7 @@ menus = [
         'link': 'it-service',
         'title': 'IT Service',
     },
-{
+    {
         'id': 5,
         'image': 'img/leave-request.png',
         'link': 'leave-request',
@@ -94,3 +97,26 @@ menus = [
 def dashboard(request):
     return render(request, 'pages/dashboard.html', {'menus': menus})
 
+
+def daily_time_sheet(request):
+    return render(request, 'pages/daily_time_sheet.html')
+
+
+def btl_plus(request):
+    return render(request, 'pages/btl_plus.html')
+
+
+def vehicle_request_form(request):
+    return render(request, 'pages/vehicle_request_form.html')
+
+
+def it_service(request):
+    return render(request, 'pages/it_service.html')
+
+
+def leave_request(request):
+    return render(request, 'pages/leave_request.html')
+
+
+def event_feedback(request):
+    return render(request, 'pages/event_feedback.html')
